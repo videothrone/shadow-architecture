@@ -22,6 +22,7 @@
         "axios": "^0.19.0",
         "babel-loader": "^8.0.5",
         "bcryptjs": "^2.4.3",
+        "chalk-animation": "^1.6.0",
         "compression": "^1.7.0",
         "cookie-session": "^2.0.0-alpha.2",
         "csurf": "^1.9.0",
