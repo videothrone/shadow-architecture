@@ -1,13 +1,10 @@
 import React from "react";
 import axios from "./axios";
-import { Link } from "react-router-dom";
 
-export default class Registration extends React.Component {
+export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            first: "",
-            last: "",
             email: "",
             password: "",
             error: ""
@@ -32,9 +29,7 @@ export default class Registration extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         axios
-            .post("/registration", {
-                first: this.state.first,
-                last: this.state.first,
+            .post("/login", {
                 email: this.state.email,
                 password: this.state.password
             })
@@ -46,7 +41,7 @@ export default class Registration extends React.Component {
                 }
             })
             .catch(function(error) {
-                console.log("error in axios.post /registration: ", error);
+                console.log("error in axios.post /login: ", error);
             });
     }
     render() {
@@ -59,20 +54,6 @@ export default class Registration extends React.Component {
                     <div>Oops, something went terribly wrong.</div>
                 )}
                 <form>
-                    <input
-                        type="text"
-                        name="first"
-                        autoComplete="off"
-                        placeholder="First Name"
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="last"
-                        autoComplete="off"
-                        placeholder="Last Name"
-                        onChange={this.handleChange}
-                    />
                     <input
                         type="text"
                         name="email"
@@ -88,14 +69,10 @@ export default class Registration extends React.Component {
                         onChange={this.handleChange}
                     />
                     <button onClick={this.handleSubmit} id="submit-button">
-                        Register
+                        Login
                     </button>
                 </form>
-                <div className="center">
-                    <p>
-                        <Link to="/login">Login</Link>
-                    </p>
-                </div>
+                <div className="center"></div>
             </div>
         );
     }

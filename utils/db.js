@@ -11,6 +11,6 @@ exports.addUsers = function(first, last, email, password) {
     );
 };
 
-// exports.getLogin = email => {
-//     return db.query(`SELECT id, password FROM users WHERE email = $1`, [email]);
-// };
+exports.getLogin = email => {
+    return db.query(`SELECT id, password FROM users WHERE email = $1`, [email]);
+};
