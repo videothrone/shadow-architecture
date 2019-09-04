@@ -1,16 +1,20 @@
 import React from "react";
 import axios from "axios";
+// import { Link } from "react-router-dom";
 
 export default class Registration extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     first: this.props.first,
-        //     last: this.props.first,
-        //     email: this.props.email
-        // };
+        this.state = {
+            first: "",
+            last: "",
+            email: "",
+            password: "",
+            error: ""
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleValidation = this.handleValidation.bind(this);
     }
     handleChange(e) {
         this.setState(
@@ -19,6 +23,11 @@ export default class Registration extends React.Component {
             },
             () => console.log("this.state: ", this.state)
         );
+    }
+    handleValidation() {
+        this.setState({
+            error: true
+        });
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -29,8 +38,12 @@ export default class Registration extends React.Component {
                 email: this.state.email,
                 password: this.state.password
             })
-            .then(function() {
-                location.replace("/");
+            .then(response => {
+                if (response.data.success === false) {
+                    this.handleValidation();
+                } else {
+                    location.replace("/");
+                }
             })
             .catch(function(error) {
                 console.log("error in axios.post /registration: ", error);
@@ -42,9 +55,11 @@ export default class Registration extends React.Component {
                 <div>
                     <img src="./img/coming-soon.png" id="welcome-logo" />
                 </div>
+                {this.state.error && (
+                    <div>Oops, something went terribly wrong.</div>
+                )}
                 <form>
                     <input
-                        required
                         type="text"
                         name="first"
                         autoComplete="off"
@@ -52,7 +67,6 @@ export default class Registration extends React.Component {
                         onChange={this.handleChange}
                     />
                     <input
-                        required
                         type="text"
                         name="last"
                         autoComplete="off"
@@ -60,7 +74,6 @@ export default class Registration extends React.Component {
                         onChange={this.handleChange}
                     />
                     <input
-                        required
                         type="text"
                         name="email"
                         autoComplete="off"
@@ -68,7 +81,6 @@ export default class Registration extends React.Component {
                         onChange={this.handleChange}
                     />
                     <input
-                        required
                         type="password"
                         name="password"
                         autoComplete="off"
@@ -80,9 +92,7 @@ export default class Registration extends React.Component {
                     </button>
                 </form>
                 <div className="center">
-                    <p>
-                        <a href="#">Log in</a>
-                    </p>
+                    <p>Login</p>
                 </div>
             </div>
         );

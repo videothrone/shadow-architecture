@@ -26,22 +26,27 @@ app.post("/registration", (req, res) => {
     let last = req.body.last;
     let email = req.body.email;
     let password = req.body.password;
-    first = first.toLowerCase();
-    first = first.charAt(0).toUpperCase() + first.substring(1);
-    last = last.toLowerCase();
-    last = last.charAt(0).toUpperCase() + last.substring(1);
+    // first = first.toLowerCase();
+    // first = first.charAt(0).toUpperCase() + first.substring(1);
+    // last = last.toLowerCase();
+    // last = last.charAt(0).toUpperCase() + last.substring(1);
 
-    hash(password).then(hash => {
-        // console.log("hash: ", hash);
-        db.addUsers(first, last, email, hash)
-            .then(() => {
-                res.json();
-            })
-            .catch(error => {
-                console.log("error: ", error);
-                res.json("error");
-            });
-    });
+    hash(password)
+        .then(hash => {
+            // console.log("hash: ", hash);
+            db.addUsers(first, last, email, hash)
+                .then(() => {
+                    res.json({ success: true });
+                })
+                .catch(error => {
+                    console.log("db.addUsers error: ", error);
+                    res.json({ success: false });
+                });
+        })
+        .catch(error => {
+            console.log("hash(password) error: ", error);
+            res.json({ success: false });
+        });
 });
 
 app.get("*", function(req, res) {
