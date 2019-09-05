@@ -34,7 +34,7 @@ export default class Registration extends React.Component {
         axios
             .post("/registration", {
                 first: this.state.first,
-                last: this.state.first,
+                last: this.state.last,
                 email: this.state.email,
                 password: this.state.password
             })

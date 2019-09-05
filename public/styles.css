@@ -95,6 +95,25 @@ input {
     outline: none;
 }
 
+#submit-main {
+    font-family: "Inconsolata", monospace;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px double #e00a74;
+    width: 25%;
+    background: #e00a74;
+    margin-left: 6px;
+}
+
+#submit-main:hover {
+    background-color: black;
+    color: white;
+}
+
+#submit-main:focus {
+    outline: none;
+}
+
 .error {
     background-color: rgba(238, 174, 202, 1);
     text-align: center;
@@ -103,4 +122,9 @@ input {
 
 p {
     margin: 10px;
+}
+
+#user-img img {
+    width: 150px;
+    height: 150px;
 }

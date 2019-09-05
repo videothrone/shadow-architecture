@@ -106,18 +106,18 @@ app.post("/login", (req, res) => {
                     }
                 })
                 .catch(error => {
-                    console.log("compare error: ", error);
+                    console.log("db.getLogin compare error: ", error);
                     res.json({ success: false });
                 });
         })
         .catch(error => {
-            console.log("db.getLogin error: ", error);
+            console.log("db.getLogin catch error: ", error);
             res.json({ success: false });
         });
 });
 
 app.get("/users", (req, res) => {
-    db.getImages(req.params.id)
+    db.getUser(req.session.userId)
         .then(response => {
             res.json(response);
         })
@@ -129,15 +129,14 @@ app.get("/users", (req, res) => {
 
 app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
     // req.file -> the file that was just uploaded
-    // req.body -> refers to the values we type in the input field
     const { filename } = req.file;
-    const url = config.s3Url + filename;
-    // console.log("url", url);
-    const { title, username, description } = req.body;
+    const imageurl = config.s3Url + filename;
+    // console.log("imageurl", imageurl);
     if (req.file) {
-        db.addImages(url, username, title, description)
+        db.addProfilePic(imageurl, req.session.userId)
             .then(function(data) {
-                res.json(data);
+                // console.log("data:", data.rows[0].imageurl);
+                res.json({ imageurl: data.rows[0].imageurl });
             })
             .catch(function(error) {
                 console.log("error in app.post /upload: ", error);

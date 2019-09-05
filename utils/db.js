@@ -15,20 +15,21 @@ exports.getLogin = email => {
     return db.query(`SELECT id, password FROM users WHERE email = $1`, [email]);
 };
 
-exports.addProfilePic = function(first, last, email, id) {
-    console.log(first, last, email, id);
+exports.addProfilePic = function(imageurl, id) {
+    console.log(imageurl, id);
     return db.query(
         `UPDATE users
-        SET first = $1, last = $2, email = $3
-        WHERE id = $4`,
-        [first || null, last || null, email || null, id]
+        SET imageurl= $1
+        WHERE id = $2
+        RETURNING imageurl`,
+        [imageurl, id]
     );
 };
 
 exports.getUser = function(id) {
     return db.query(
-        `SELECT url, username, title, description
-        FROM images
+        `SELECT first, last, imageurl
+        FROM users
         WHERE id = $1`,
         [id]
     );
