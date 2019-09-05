@@ -7,7 +7,7 @@ export function Profilepic({ imageurl, first, last, showModal }) {
     return (
         <div>
             <h2>
-                I&apos;m the presentational comp. My name is: {first} {last}
+                Welcome {first} {last}!
             </h2>
             <div id="user-img">
                 <img onClick={showModal} src={imageurl} title={first} />

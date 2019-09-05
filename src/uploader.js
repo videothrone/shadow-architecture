@@ -15,7 +15,6 @@ export class Uploader extends React.Component {
         // console.log("file: ", e.target.files[0]);
         // console.log("e.target", e.target.files);
         this.file = e.target.files[0];
-        // this.setState = this.file;
     }
     handleClick(e) {
         e.preventDefault();
@@ -25,9 +24,11 @@ export class Uploader extends React.Component {
         axios
             .post("/upload", formData)
             .then(response => {
-                response.data.imageurl;
-                console.log("response.data.imageurl: ", response.data.imageurl);
+                // console.log("response.data.imageurl: ", response.data.imageurl);
                 this.props.getImageUrl(response.data.imageurl);
+            })
+            .then(() => {
+                this.props.hideModal();
             })
             .catch(function(error) {
                 console.log("error in axios.post /upload: ", error);
@@ -49,6 +50,9 @@ export class Uploader extends React.Component {
                 <button onClick={this.handleClick} id="submit-main">
                     S U B M I T
                 </button>
+                <p>
+                    <div onClick={this.props.hideModal}>X</div>
+                </p>
             </div>
         );
     }

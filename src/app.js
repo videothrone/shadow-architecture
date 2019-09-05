@@ -14,6 +14,7 @@ export class App extends React.Component {
         };
         this.showModal = this.showModal.bind(this);
         this.getImageUrl = this.getImageUrl.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     }
 
     componentDidMount() {
@@ -47,6 +48,12 @@ export class App extends React.Component {
         });
     }
 
+    hideModal() {
+        this.setState({
+            uploaderIsVisible: false
+        });
+    }
+
     getImageUrl(image) {
         this.setState({
             imageurl: image
@@ -65,7 +72,10 @@ export class App extends React.Component {
                     showModal={this.showModal}
                 />
                 {this.state.uploaderIsVisible && (
-                    <Uploader getImageUrl={this.getImageUrl} />
+                    <Uploader
+                        getImageUrl={this.getImageUrl}
+                        hideModal={this.hideModal}
+                    />
                 )}
             </React.Fragment>
         );
