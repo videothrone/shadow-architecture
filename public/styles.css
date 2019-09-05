@@ -42,37 +42,9 @@ body {
 }
 
 #welcome-logo {
-    width: 550px;
-    height: 550px;
-}
-
-.login-menu {
-    display: flex;
-    justify-content: flex-end;
-    font-family: "Inconsolata", monospace;
-    font-size: 19px;
-    padding-right: 15px;
-    color: rgba(210, 100, 131, 1);
-}
-
-.login-menu a {
-    color: #ffd2b0;
-    text-decoration: none;
-    margin: 2px;
-}
-
-.login-menu a:hover {
-    color: rgba(210, 100, 131, 1);
-}
-
-.login-img {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.login-img img {
-    max-width: 600px;
+    width: 650px;
+    height: 650px;
+    margin-top: 10%;
 }
 
 input {
@@ -85,10 +57,19 @@ input {
     margin-left: 20px;
 }
 
-.inputs {
+.flex-container {
     display: flex;
-    justify-content: center;
     text-align: center;
+}
+
+#welcome {
+    justify-content: center;
+}
+
+#registration {
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
 }
 
 #submit-button {
@@ -114,7 +95,7 @@ input {
     outline: none;
 }
 
-.error h1 {
+.error {
     background-color: rgba(238, 174, 202, 1);
     text-align: center;
     padding: 3px;

@@ -5,10 +5,36 @@ const db = require("./utils/db");
 const { hash, compare } = require("./utils/bc");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
+const s3 = require("./s3");
+const config = require("./config");
 const compression = require("compression");
 
-app.use(compression());
+/// FILE UPLOAD BOILERPLATE ///
+const multer = require("multer");
+const uidSafe = require("uid-safe");
+const path = require("path");
 
+const diskStorage = multer.diskStorage({
+    destination: function(req, file, callback) {
+        callback(null, __dirname + "/uploads");
+    },
+    filename: function(req, file, callback) {
+        uidSafe(24).then(function(uid) {
+            callback(null, uid + path.extname(file.originalname));
+        });
+    }
+});
+
+const uploader = multer({
+    storage: diskStorage,
+    limits: {
+        fileSize: 2097152
+    }
+});
+
+/// FILE UPLOAD BOILERPLATE END ///
+
+app.use(compression());
 app.use(express.static("./public"));
 app.use(express.json());
 
@@ -50,7 +76,6 @@ app.post("/registration", (req, res) => {
 
     hash(password)
         .then(hash => {
-            // console.log("hash: ", hash);
             db.addUsers(first, last, email, hash)
                 .then(() => {
                     res.json({ success: true });
@@ -89,6 +114,44 @@ app.post("/login", (req, res) => {
             console.log("db.getLogin error: ", error);
             res.json({ success: false });
         });
+});
+
+app.get("/users", (req, res) => {
+    db.getImages(req.params.id)
+        .then(response => {
+            res.json(response);
+        })
+        .catch(error => {
+            console.log("error from app.get /users: ", error);
+        });
+    // console.log("This is the users route");
+});
+
+app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
+    // req.file -> the file that was just uploaded
+    // req.body -> refers to the values we type in the input field
+    const { filename } = req.file;
+    const url = config.s3Url + filename;
+    // console.log("url", url);
+    const { title, username, description } = req.body;
+    if (req.file) {
+        db.addImages(url, username, title, description)
+            .then(function(data) {
+                res.json(data);
+            })
+            .catch(function(error) {
+                console.log("error in app.post /upload: ", error);
+            });
+    } else {
+        res.json({
+            success: false
+        });
+    }
+});
+
+app.get("/logout", (req, res) => {
+    req.session = null;
+    res.redirect("/welcome");
 });
 
 app.get("*", function(req, res) {

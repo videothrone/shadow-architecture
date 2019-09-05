@@ -51,12 +51,11 @@ export default class Registration extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div>
-                    <img src="./img/coming-soon.png" id="welcome-logo" />
-                </div>
+            <div id="registration">
                 {this.state.error && (
-                    <div>Oops, something went terribly wrong.</div>
+                    <div className="error">
+                        Oops, something went terribly wrong.
+                    </div>
                 )}
                 <form>
                     <input
@@ -87,6 +86,7 @@ export default class Registration extends React.Component {
                         placeholder="Password"
                         onChange={this.handleChange}
                     />
+                    <br />
                     <button onClick={this.handleSubmit} id="submit-button">
                         Register
                     </button>

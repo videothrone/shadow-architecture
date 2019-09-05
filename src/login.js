@@ -47,11 +47,10 @@ export default class Login extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <img src="./img/coming-soon.png" id="welcome-logo" />
-                </div>
                 {this.state.error && (
-                    <div>Oops, something went terribly wrong.</div>
+                    <div className="error">
+                        Oops, something went terribly wrong.
+                    </div>
                 )}
                 <form>
                     <input
