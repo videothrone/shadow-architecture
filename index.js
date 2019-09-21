@@ -4,35 +4,10 @@ const ca = require("chalk-animation");
 const db = require("./utils/db");
 const { hash, compare } = require("./utils/bc");
 const cookieSession = require("cookie-session");
-const csurf = require("csurf");
+// const csurf = require("csurf");
 const s3 = require("./s3");
 const config = require("./config");
 const compression = require("compression");
-
-/// FILE UPLOAD BOILERPLATE ///
-const multer = require("multer");
-const uidSafe = require("uid-safe");
-const path = require("path");
-
-const diskStorage = multer.diskStorage({
-    destination: function(req, file, callback) {
-        callback(null, __dirname + "/uploads");
-    },
-    filename: function(req, file, callback) {
-        uidSafe(24).then(function(uid) {
-            callback(null, uid + path.extname(file.originalname));
-        });
-    }
-});
-
-const uploader = multer({
-    storage: diskStorage,
-    limits: {
-        fileSize: 2097152
-    }
-});
-
-/// FILE UPLOAD BOILERPLATE END ///
 
 app.use(compression());
 app.use(express.static("./public"));
@@ -46,12 +21,12 @@ app.use(
     })
 );
 
-app.use(csurf());
-
-app.use(function(req, res, next) {
-    res.cookie("mytoken", req.csrfToken());
-    next();
-});
+// app.use(csurf());
+//
+// app.use(function(req, res, next) {
+//     res.cookie("mytoken", req.csrfToken());
+//     next();
+// });
 
 if (process.env.NODE_ENV != "production") {
     app.use(
@@ -127,26 +102,26 @@ app.get("/users", (req, res) => {
     // console.log("This is the users route");
 });
 
-app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
-    // req.file -> the file that was just uploaded
-    const { filename } = req.file;
-    const imageurl = config.s3Url + filename;
-    // console.log("imageurl", imageurl);
-    if (req.file) {
-        db.addProfilePic(imageurl, req.session.userId)
-            .then(function(data) {
-                // console.log("data:", data.rows[0].imageurl);
-                res.json({ imageurl: data.rows[0].imageurl });
-            })
-            .catch(function(error) {
-                console.log("error in app.post /upload: ", error);
-            });
-    } else {
-        res.json({
-            success: false
-        });
-    }
-});
+// app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
+//     // req.file -> the file that was just uploaded
+//     const { filename } = req.file;
+//     const imageurl = config.s3Url + filename;
+//     // console.log("imageurl", imageurl);
+//     if (req.file) {
+//         db.addProfilePic(imageurl, req.session.userId)
+//             .then(function(data) {
+//                 // console.log("data:", data.rows[0].imageurl);
+//                 res.json({ imageurl: data.rows[0].imageurl });
+//             })
+//             .catch(function(error) {
+//                 console.log("error in app.post /upload: ", error);
+//             });
+//     } else {
+//         res.json({
+//             success: false
+//         });
+//     }
+// });
 
 app.get("/logout", (req, res) => {
     req.session = null;
@@ -158,5 +133,5 @@ app.get("*", function(req, res) {
 });
 
 app.listen(8080, function() {
-    ca.rainbow("ʕ•ᴥ•ʔ Social Network Express is running...");
+    ca.rainbow("ʕ•ᴥ•ʔ Shadow Architecture is running...");
 });
