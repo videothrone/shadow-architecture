@@ -1,30 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     GoogleMap,
     withScriptjs,
     withGoogleMap,
-    Marker
+    Marker,
+    InfoWindow
 } from "react-google-maps";
 import mapStyles from "./mapstyles";
-import * as parksData from "./data/markers.json";
+import * as placesData from "./data/markers.json";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { MarkerOverlay } from "./marker-overlay";
 
 function googleMap() {
+    const [selectedPlace, setSelectedPlace] = useState(null);
+
     return (
-        <GoogleMap
-            defaultZoom={12}
-            defaultCenter={{ lat: 45.421532, lng: -75.697189 }}
-            defaultOptions={{ styles: mapStyles }}
-        >
-            {parksData.features.map(park => (
-                <Marker
-                    key={park.properties.PARK_ID}
-                    position={{
-                        lat: park.geometry.coordinates[1],
-                        lng: park.geometry.coordinates[0]
-                    }}
-                />
-            ))}
-        </GoogleMap>
+        <Router>
+            <GoogleMap
+                defaultZoom={12}
+                defaultCenter={{ lat: 52.520008, lng: 13.404954 }}
+                defaultOptions={{ styles: mapStyles }}
+            >
+                {placesData.places.map(place => (
+                    <Marker
+                        key={place.properties.PLACE_ID}
+                        position={{
+                            lat: place.coordinates[0],
+                            lng: place.coordinates[1]
+                        }}
+                        onClick={() => {
+                            setSelectedPlace(place);
+                        }}
+                        icon={{
+                            url: "./img/marker-brown.png",
+                            scaledSize: new window.google.maps.Size(75, 75)
+                        }}
+                    />
+                ))}
+
+                {selectedPlace && (
+                    <InfoWindow
+                        position={{
+                            lat: selectedPlace.coordinates[0],
+                            lng: selectedPlace.coordinates[1]
+                        }}
+                        onCloseClick={() => {
+                            setSelectedPlace(null);
+                        }}
+                    >
+                        <div className="info-window">
+                            <h3>{selectedPlace.properties.NAME}</h3>
+                            <p>{selectedPlace.properties.DESCRIPTION}</p>
+                            <p>
+                                <Link
+                                    to="/marker-overlay"
+                                    onClick={() => {
+                                        setSelectedPlace(null);
+                                    }}
+                                >
+                                    Test
+                                </Link>
+                            </p>
+                        </div>
+                    </InfoWindow>
+                )}
+                <Route path="/marker-overlay" component={MarkerOverlay} />
+            </GoogleMap>
+        </Router>
     );
 }
 

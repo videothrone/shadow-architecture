@@ -1,20 +1,14 @@
 import React from "react";
-import { Profilepic } from "./profilepic";
-import { Uploader } from "./uploader";
-import axios from "./axios";
+// import axios from "./axios";
 import Map from "./map";
 
 export class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            first: "",
-            last: "",
-            imageurl: "",
             uploaderIsVisible: false
         };
         this.showModal = this.showModal.bind(this);
-        this.getImageUrl = this.getImageUrl.bind(this);
         this.hideModal = this.hideModal.bind(this);
     }
 
@@ -64,7 +58,7 @@ export class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Hello from App</h1>
+                <h1>S h a d o w / A r c h i t e c t u r e</h1>
                 <Map />
             </React.Fragment>
         );
