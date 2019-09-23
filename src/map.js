@@ -13,6 +13,8 @@ import { MarkerOverlay } from "./marker-overlay";
 
 function googleMap() {
     const [selectedPlace, setSelectedPlace] = useState(null);
+    const [overlayIsVisible, setOverlayIsVisible] = useState(false);
+    const [infoWindowIsVisible, setInfoWindowIsVisible] = useState(false);
 
     return (
         <Router>
@@ -30,6 +32,7 @@ function googleMap() {
                         }}
                         onClick={() => {
                             setSelectedPlace(place);
+                            setInfoWindowIsVisible(true);
                         }}
                         icon={{
                             url: "./img/marker-brown.png",
@@ -38,7 +41,7 @@ function googleMap() {
                     />
                 ))}
 
-                {selectedPlace && (
+                {selectedPlace && infoWindowIsVisible && (
                     <InfoWindow
                         position={{
                             lat: selectedPlace.coordinates[0],
@@ -55,7 +58,9 @@ function googleMap() {
                                 <Link
                                     to="/marker-overlay"
                                     onClick={() => {
-                                        setSelectedPlace(null);
+                                        setSelectedPlace(selectedPlace);
+                                        setOverlayIsVisible(true);
+                                        setInfoWindowIsVisible(false);
                                     }}
                                 >
                                     Test
@@ -64,7 +69,17 @@ function googleMap() {
                         </div>
                     </InfoWindow>
                 )}
-                <Route path="/marker-overlay" component={MarkerOverlay} />
+
+                <Route
+                    path="/marker-overlay"
+                    render={() => (
+                        <MarkerOverlay
+                            selectedPlace={selectedPlace}
+                            setOverlayIsVisible={setOverlayIsVisible}
+                            overlayIsVisible={overlayIsVisible}
+                        />
+                    )}
+                />
             </GoogleMap>
         </Router>
     );

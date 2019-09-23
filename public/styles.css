@@ -30,6 +30,14 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    text-align: center;
+    font-family: "UnifrakturCook", cursive;
+    color: #bb7c66;
+    font-size: 4vw;
+    margin: 0;
+}
+
 .center {
     text-align: center;
 }
@@ -47,7 +55,7 @@ h1 {
 
 input {
     background-color: white;
-    font-family: "Inconsolata", monospace;
+    font-family: "Arvo", serif;
     height: 40px;
     font-size: 19px;
     text-align: center;
@@ -71,7 +79,7 @@ input {
 }
 
 #submit-button {
-    font-family: "Inconsolata", monospace;
+    font-family: "Arvo", serif;
     font-weight: 900;
     padding: 10px;
     margin-top: 20px;
@@ -94,7 +102,7 @@ input {
 }
 
 #submit-main {
-    font-family: "Inconsolata", monospace;
+    font-family: "Arvo", serif;
     padding: 10px;
     font-size: 20px;
     border: 3px double #e00a74;
@@ -140,8 +148,12 @@ p {
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 999999;
     color: white;
-    font-family: "Inconsolata", monospace;
+    font-family: "Arvo", serif;
     font-size: 20px;
     padding: 7%;
     text-align: center;
+}
+
+#overlay-online-users h2 {
+    color: black;
 }
