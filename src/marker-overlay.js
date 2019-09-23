@@ -14,7 +14,9 @@ export function MarkerOverlay(props) {
                         </div>
                         <h2>{props.selectedPlace.properties.NAME}</h2>
                         <div>
-                            <img src="./img/teufelsberg.jpg" />
+                            <img
+                                src={props.selectedPlace.properties.IMAGEURL}
+                            />
                         </div>
                         <div>
                             Address: {props.selectedPlace.properties.ADDRESS}

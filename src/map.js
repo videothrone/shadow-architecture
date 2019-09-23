@@ -53,6 +53,7 @@ function googleMap() {
                     >
                         <div className="info-window">
                             <h2>{selectedPlace.properties.NAME}</h2>
+                            <img src={selectedPlace.properties.IMAGEURL} />
                             <div>{selectedPlace.properties.DESCRIPTION}</div>
                             <Link
                                 to="/marker-overlay"

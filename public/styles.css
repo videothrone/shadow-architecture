@@ -54,6 +54,12 @@ h1 {
     margin-top: 0;
 }
 
+.info-window img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
 #info-window-address {
     margin-top: 10px;
     color: darkgrey;
