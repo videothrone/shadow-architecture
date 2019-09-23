@@ -109,6 +109,28 @@
                 "IMAGEURL": "img/teufelsberg.jpg"
             },
             "coordinates": [52.5756295, 13.3946943]
+        },
+        {
+            "properties": {
+                "PLACE_ID": 11,
+                "NAME": "Die Wiesenburg",
+                "DESCRIPTION": "A former homeless shelter",
+                "ADDRESS": "Wiesenstraße 55, 13357",
+                "FULL_DESCRIPTION": "Die Wiesenburg, once Germany’s most progressive shelter for the homeless and needy. Now in a state of disrepair or ruin, though lovingly tended by artists who are brightening this corner of Wedding through their performances and creations.",
+                "IMAGEURL": "img/teufelsberg.jpg"
+            },
+            "coordinates": [52.54532, 13.37476]
+        },
+        {
+            "properties": {
+                "PLACE_ID": 12,
+                "NAME": "Siemensbahn",
+                "DESCRIPTION": "Abandoned railway line through Siemensstadt, formerly the epicenter for Siemens’ industrial activity",
+                "ADDRESS": "Siemensdamm 54, 13629 Berlin",
+                "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "IMAGEURL": "img/teufelsberg.jpg"
+            },
+            "coordinates": [52.535205, 13.275936]
         }
     ]
 }
