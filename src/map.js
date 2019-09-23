@@ -52,20 +52,21 @@ function googleMap() {
                         }}
                     >
                         <div className="info-window">
-                            <h3>{selectedPlace.properties.NAME}</h3>
-                            <p>{selectedPlace.properties.DESCRIPTION}</p>
-                            <p>
-                                <Link
-                                    to="/marker-overlay"
-                                    onClick={() => {
-                                        setSelectedPlace(selectedPlace);
-                                        setOverlayIsVisible(true);
-                                        setInfoWindowIsVisible(false);
-                                    }}
-                                >
-                                    Test
-                                </Link>
-                            </p>
+                            <h2>{selectedPlace.properties.NAME}</h2>
+                            <div>{selectedPlace.properties.DESCRIPTION}</div>
+                            <Link
+                                to="/marker-overlay"
+                                onClick={() => {
+                                    setSelectedPlace(selectedPlace);
+                                    setOverlayIsVisible(true);
+                                    setInfoWindowIsVisible(false);
+                                }}
+                            >
+                                Explore more...
+                            </Link>
+                            <div id="info-window-address">
+                                {selectedPlace.properties.ADDRESS}
+                            </div>
                         </div>
                     </InfoWindow>
                 )}

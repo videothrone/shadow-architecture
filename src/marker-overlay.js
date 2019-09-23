@@ -1,18 +1,29 @@
 import React from "react";
 
 export function MarkerOverlay(props) {
-    console.log("Overlay props", props);
-
     return (
         <React.Fragment>
             {props.overlayIsVisible && (
                 <div id="overlay-online-users">
-                    <button onClick={() => props.setOverlayIsVisible(false)}>
-                        X
-                    </button>
-                    <h2>{props.selectedPlace.properties.NAME}</h2>
-                    <div></div>
-                    <div>Address: </div>
+                    <div id="marker-overlay-content-container">
+                        <div
+                            id="x"
+                            onClick={() => props.setOverlayIsVisible(false)}
+                        >
+                            X
+                        </div>
+                        <h2>{props.selectedPlace.properties.NAME}</h2>
+                        <div>
+                            <img src="./img/teufelsberg.jpg" />
+                        </div>
+                        <div>
+                            Address: {props.selectedPlace.properties.ADDRESS}
+                        </div>
+                        <div id="full-description">
+                            Address:{" "}
+                            {props.selectedPlace.properties.FULL_DESCRIPTION}
+                        </div>
+                    </div>
                 </div>
             )}
         </React.Fragment>

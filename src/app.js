@@ -7,24 +7,10 @@ export class App extends React.Component {
         this.state = {
             overlayIsVisible: false
         };
-        this.showOverlay = this.showOverlay.bind(this);
-        this.hideOverlay = this.hideOverlay.bind(this);
     }
 
     componentDidMount() {
         console.log("App mounted");
-    }
-
-    showOverlay() {
-        this.setState({
-            overlayIsVisible: true
-        });
-    }
-
-    hideOverlay() {
-        this.setState({
-            overlayIsVisible: false
-        });
     }
 
     render() {

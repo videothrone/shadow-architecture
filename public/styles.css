@@ -30,14 +30,6 @@ h1 {
     margin: 0;
 }
 
-h2 {
-    text-align: center;
-    font-family: "UnifrakturCook", cursive;
-    color: #bb7c66;
-    font-size: 4vw;
-    margin: 0;
-}
-
 .center {
     text-align: center;
 }
@@ -45,94 +37,26 @@ h2 {
 .info-window {
     font-family: "Arvo", serif;
     font-size: 14px;
+    margin-left: 10px;
 }
 
-#welcome-logo {
-    width: 650px;
-    height: 650px;
-    margin-top: 10%;
+.info-window a {
+    text-decoration: none;
 }
 
-input {
-    background-color: white;
-    font-family: "Arvo", serif;
-    height: 40px;
-    font-size: 19px;
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
+.info-window p {
+    margin-bottom: 5px;
 }
 
-.flex-container {
-    display: flex;
-    text-align: center;
+.info-window h2 {
+    color: #bb7c66;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
-#welcome {
-    justify-content: center;
-}
-
-#registration {
-    justify-content: center;
-    align-items: center;
-    margin-top: 25%;
-}
-
-#submit-button {
-    font-family: "Arvo", serif;
-    font-weight: 900;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 3px;
-    font-size: 19px;
-    background: #00b2dc;
-    border: 3px solid #032e4c;
-    cursor: pointer;
-    color: white;
-}
-
-#submit-button:hover {
-    background-color: white;
-    color: black;
-    box-shadow: inset 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
-}
-
-#submit-button:focus {
-    outline: none;
-}
-
-#submit-main {
-    font-family: "Arvo", serif;
-    padding: 10px;
-    font-size: 20px;
-    border: 3px double #e00a74;
-    width: 25%;
-    background: #e00a74;
-    margin-left: 6px;
-}
-
-#submit-main:hover {
-    background-color: black;
-    color: white;
-}
-
-#submit-main:focus {
-    outline: none;
-}
-
-.error {
-    background-color: rgba(238, 174, 202, 1);
-    text-align: center;
-    padding: 3px;
-}
-
-p {
-    margin: 10px;
-}
-
-#user-img img {
-    width: 150px;
-    height: 150px;
+#info-window-address {
+    margin-top: 10px;
+    color: darkgrey;
 }
 
 #overlay-online-users {
@@ -145,15 +69,47 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     z-index: 999999;
-    color: white;
+    color: black;
     font-family: "Arvo", serif;
     font-size: 20px;
-    padding: 7%;
+    padding: 3%;
     text-align: center;
 }
 
 #overlay-online-users h2 {
-    color: black;
+    color: white;
+    margin: 0;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 5vw;
+    padding: 10px;
+}
+
+#overlay-online-users img {
+    height: 50vh;
+    width: 90vw;
+    object-fit: cover;
+}
+
+#marker-overlay-content-container {
+    background-color: rgba(187, 124, 102, 0.8);
+}
+
+#full-description {
+    margin-top: 15px;
+}
+
+#x {
+    font-family: "UnifrakturCook", cursive;
+    text-decoration: none;
+    color: #ffd2b0;
+    cursor: pointer;
+    font-size: 3vw;
+    position: absolute;
+    margin-left: 91%;
+}
+
+#x:hover {
+    color: rgba(210, 100, 131, 1);
 }
