@@ -199,12 +199,14 @@ h1 {
     border-bottom: 5px solid #fff;
     border-left: 5px solid #fff;
     -webkit-transform-origin: 0 100%;
+    pointer-events: none;
 }
 
 .animation::after {
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     -webkit-transform-origin: 100% 0%;
+    pointer-events: none;
 }
 
 .place-container:hover::after,
