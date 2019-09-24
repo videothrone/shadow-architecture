@@ -104,7 +104,7 @@ export default function Map() {
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={
                     <div
-                        style={{ height: `80%`, border: `3px double #bb7c66` }}
+                        style={{ height: `80%`, border: `5px solid #bb7c66` }}
                     />
                 }
                 mapElement={<div style={{ height: `100%` }} />}
