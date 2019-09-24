@@ -9,7 +9,7 @@ export default function AllPlaces(props) {
             <Router>
                 <div className="all-places-container">
                     {placesData.places.map((place, index) => (
-                        <div key={index} className="place-container">
+                        <div key={index} className="place-container animation">
                             <Link
                                 to="/marker-overlay"
                                 onClick={() => {
@@ -19,7 +19,9 @@ export default function AllPlaces(props) {
                             >
                                 <h2>{place.properties.NAME}</h2>
                                 <img src={place.properties.IMAGEURL} />
-                                <div>{place.properties.DESCRIPTION}</div>
+                                <div className="all-places-description">
+                                    {place.properties.DESCRIPTION}
+                                </div>
                             </Link>
                         </div>
                     ))}

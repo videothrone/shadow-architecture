@@ -75,7 +75,7 @@ h1 {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 999999;
     color: black;
     font-family: "Arvo", serif;
@@ -112,7 +112,7 @@ h1 {
 #x {
     font-family: "UnifrakturCook", cursive;
     text-decoration: none;
-    color: #ffd2b0;
+    color: #bb7c66;
     cursor: pointer;
     font-size: 3vw;
     position: absolute;
@@ -146,14 +146,68 @@ h1 {
 .place-container {
     margin-right: 15px;
     width: 350px;
-    background-color: white;
+    background-color: black;
     margin-top: 20px;
     margin-bottom: 15px;
     cursor: pointer;
+    box-shadow: inset 0 0 0 5px #bb7c66;
+    transition: 0.5s;
+    position: relative;
+}
+
+.place-container a {
+    text-decoration: none;
+}
+
+.place-container a:hover {
+    text-decoration: none;
+    color: #bb7c66;
 }
 
 .place-container img {
     width: 350px;
     height: 200px;
     object-fit: cover;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.place-container h2 {
+    text-align: center;
+}
+
+.place-container div {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.place-container::before,
+.place-container::after {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    -webkit-transform: scale(0);
+}
+
+.animation::before {
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid #fff;
+    -webkit-transform-origin: 0 100%;
+}
+
+.animation::after {
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    -webkit-transform-origin: 100% 0%;
+}
+
+.place-container:hover::after,
+.place-container:hover::before {
+    -webkit-transform: scale(1);
 }
