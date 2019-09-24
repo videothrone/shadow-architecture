@@ -27,7 +27,8 @@ h1 {
     font-family: "UnifrakturCook", cursive;
     color: #bb7c66;
     font-size: 6vw;
-    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .center {
@@ -137,7 +138,7 @@ h1 {
 }
 
 .all-places-container {
-    margin-top: 30px;
+    margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
