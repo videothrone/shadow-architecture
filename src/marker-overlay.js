@@ -18,11 +18,10 @@ export function MarkerOverlay(props) {
                                 src={props.selectedPlace.properties.IMAGEURL}
                             />
                         </div>
-                        <div>
+                        <div id="overlay-address">
                             Address: {props.selectedPlace.properties.ADDRESS}
                         </div>
                         <div id="full-description">
-                            Address:{" "}
                             {props.selectedPlace.properties.FULL_DESCRIPTION}
                         </div>
                     </div>

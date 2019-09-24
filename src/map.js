@@ -10,6 +10,7 @@ import mapStyles from "./mapstyles";
 import * as placesData from "./data/markers.json";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { MarkerOverlay } from "./marker-overlay";
+import AllPlaces from "./all-places";
 
 function googleMap() {
     const [selectedPlace, setSelectedPlace] = useState(null);
@@ -83,6 +84,12 @@ function googleMap() {
                     )}
                 />
             </GoogleMap>
+            <AllPlaces
+                selectedPlace={selectedPlace}
+                setSelectedPlace={setSelectedPlace}
+                setOverlayIsVisible={setOverlayIsVisible}
+                overlayIsVisible={overlayIsVisible}
+            />
         </Router>
     );
 }
@@ -91,11 +98,15 @@ const WrappedMap = withScriptjs(withGoogleMap(googleMap));
 
 export default function Map() {
     return (
-        <div style={{ width: "100vw", height: "100vh" }}>
+        <div id="map-container">
             <WrappedMap
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAhTuaH6AhlsaXQe4pdCQ44kgRoogmNvLs`}
                 loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `80%` }} />}
+                containerElement={
+                    <div
+                        style={{ height: `80%`, border: `3px double #bb7c66` }}
+                    />
+                }
                 mapElement={<div style={{ height: `100%` }} />}
             />
         </div>
