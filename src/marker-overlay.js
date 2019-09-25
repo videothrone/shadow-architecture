@@ -19,7 +19,25 @@ export function MarkerOverlay(props) {
                             />
                         </div>
                         <div id="overlay-address">
-                            {props.selectedPlace.properties.ADDRESS}
+                            {props.selectedPlace.properties.ADDRESS} |{" "}
+                            <div className="route" id="overlay-icon">
+                                <a
+                                    href={
+                                        props.selectedPlace.properties.DIRECTION
+                                    }
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    <img
+                                        src="/img/icon-black.png"
+                                        alt="Click for maps route"
+                                    />
+                                    <img
+                                        src="/img/icon-white.png"
+                                        className="overlay-icon icon-top"
+                                    />
+                                </a>
+                            </div>
                         </div>
                         <div id="full-description">
                             {props.selectedPlace.properties.FULL_DESCRIPTION}
