@@ -56,13 +56,13 @@ h1 {
 }
 
 .info-window img {
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
     object-fit: cover;
 }
 
 #info-window-address {
-    margin-top: 10px;
+    margin-top: 15px;
     color: darkgrey;
 }
 

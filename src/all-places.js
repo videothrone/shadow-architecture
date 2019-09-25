@@ -17,7 +17,7 @@ export default function AllPlaces(props) {
                                     props.setSelectedPlace(place);
                                 }}
                             >
-                                <h2>{place.properties.NAME}</h2>
+                                <h2>{place.properties.SHORT_NAME}</h2>
                                 <img src={place.properties.IMAGEURL} />
                                 <div className="all-places-description">
                                     {place.properties.DESCRIPTION}

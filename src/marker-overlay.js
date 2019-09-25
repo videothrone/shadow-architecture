@@ -19,7 +19,7 @@ export function MarkerOverlay(props) {
                             />
                         </div>
                         <div id="overlay-address">
-                            Address: {props.selectedPlace.properties.ADDRESS}
+                            {props.selectedPlace.properties.ADDRESS}
                         </div>
                         <div id="full-description">
                             {props.selectedPlace.properties.FULL_DESCRIPTION}

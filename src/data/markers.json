@@ -4,6 +4,7 @@
             "properties": {
                 "PLACE_ID": 1,
                 "NAME": "Teufelsberg Field Station",
+                "SHORT_NAME": "Teufelsberg",
                 "DESCRIPTION": "An abandoned former Cold War NSA field station",
                 "ADDRESS": "Teufelsseechaussee 10, 14193 Berlin",
                 "FULL_DESCRIPTION": "Teufelsberg (German for Devil's Mountain) is a man-made hill in Berlin, Germany, in the Grunewald locality of former West Berlin. It rises about 80 metres (260 ft) above the surrounding Teltow plateau and 120.1 metres (394 ft) above the sea level, in the north of Berlin's Grunewald Forest. It was named after the Teufelssee (i.e. Devil's lake) in its southerly vicinity. The hill is made of rubble, and covers an under-construction Nazi military-technical college (Wehrtechnische Fakultät). During the Cold War, there was a U.S. NSA listening station on the hill, Field Station Berlin. The site of the former Field Station is now fenced off and is currently being managed by an organisation which charges 5 to 10 Euros for public access.",
@@ -15,10 +16,11 @@
             "properties": {
                 "PLACE_ID": 2,
                 "NAME": "Tempelhof Airport",
+                "SHORT_NAME": "Tempelhof Airport",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Platz der Luftbrücke 5, 12101 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/tempelhof.jpg"
             },
             "coordinates": [52.4782, 13.241111]
         },
@@ -26,10 +28,11 @@
             "properties": {
                 "PLACE_ID": 3,
                 "NAME": "Spreepark Amusement Park",
+                "SHORT_NAME": "Spreepark",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Kiehnwerderallee 1-3, 12437 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/spreepark.jpg"
             },
             "coordinates": [52.48358, 13.491672]
         },
@@ -37,6 +40,7 @@
             "properties": {
                 "PLACE_ID": 4,
                 "NAME": "Blub Swimming Pool",
+                "SHORT_NAME": "Blub Swimming Pool",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Buschkrugallee 64, 12359 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -48,10 +52,11 @@
             "properties": {
                 "PLACE_ID": 5,
                 "NAME": "Johannisthal Airfield",
+                "SHORT_NAME": "Johannisthal Airfield",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Segelfliegerdamm 15, 12487 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/johannisthal.jpg"
             },
             "coordinates": [52.441786, 13.512842]
         },
@@ -59,21 +64,23 @@
             "properties": {
                 "PLACE_ID": 6,
                 "NAME": "Bärenquell Brewery",
+                "SHORT_NAME": "Bärenquell Brewery",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Schnellerstraße 137, 12439 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/baerenquell.jpg"
             },
             "coordinates": [52.460297, 13.506694]
         },
         {
             "properties": {
                 "PLACE_ID": 7,
-                "NAME": "Sporthotel Hohenschönhausen",
+                "NAME": "Dynamo Sporthotel Hohenschönhausen",
+                "SHORT_NAME": "Dynamo Sporthotel",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Weißenseer Weg / Konrad-Wolf-Straße, 13055 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/dynamo.jpg"
             },
             "coordinates": [52.539214, 13.498276]
         },
@@ -81,54 +88,59 @@
             "properties": {
                 "PLACE_ID": 8,
                 "NAME": "Pankow Freight Yard",
+                "SHORT_NAME": "Pankow Freight Yard",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Am Feuchten Winkel 137-145, Berlin 13089",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/pankow-freightyard.jpg"
             },
             "coordinates": [52.578702, 13.431438]
         },
         {
             "properties": {
                 "PLACE_ID": 9,
-                "NAME": "Pankow Swimming Pool",
+                "NAME": "Pankow Baths",
+                "SHORT_NAME": "Pankow Baths",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Wolfshagener Straße 91-93, 13187 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/pankow-schwimmhalle.jpg"
             },
             "coordinates": [52.540911, 13.433879]
         },
         {
             "properties": {
                 "PLACE_ID": 10,
-                "NAME": "Abandoned Iraqi Embassy",
+                "NAME": "Abandoned GDR Iraqi Embassy",
+                "SHORT_NAME": "GDR Iraqi Embassy",
                 "DESCRIPTION": "Large concrete bowl, 10 plus components, many street and vertical components",
                 "ADDRESS": "Tschaikowskistraße 51, Berlin 13156",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/embassy.jpg"
             },
             "coordinates": [52.5756295, 13.3946943]
         },
         {
             "properties": {
                 "PLACE_ID": 11,
-                "NAME": "Die Wiesenburg",
+                "NAME": "Die Wiesenburg - Homeless Shelter",
+                "SHORT_NAME": "Die Wiesenburg",
                 "DESCRIPTION": "A former homeless shelter",
                 "ADDRESS": "Wiesenstraße 55, 13357",
                 "FULL_DESCRIPTION": "Die Wiesenburg, once Germany’s most progressive shelter for the homeless and needy. Now in a state of disrepair or ruin, though lovingly tended by artists who are brightening this corner of Wedding through their performances and creations.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/wiesenburg.jpg"
             },
             "coordinates": [52.54532, 13.37476]
         },
         {
             "properties": {
                 "PLACE_ID": 12,
-                "NAME": "Siemensbahn",
+                "NAME": "Siemensbahn S-Bahn Route",
+                "SHORT_NAME": "Siemensbahn",
                 "DESCRIPTION": "Abandoned railway line through Siemensstadt, formerly the epicenter for Siemens’ industrial activity",
                 "ADDRESS": "Siemensdamm 54, 13629 Berlin",
                 "FULL_DESCRIPTION": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "IMAGEURL": "img/teufelsberg.jpg"
+                "IMAGEURL": "img/siemensbahn.jpg"
             },
             "coordinates": [52.535205, 13.275936]
         }
