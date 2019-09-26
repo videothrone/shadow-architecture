@@ -6,7 +6,7 @@ import {
     Marker,
     InfoWindow
 } from "react-google-maps";
-import mapStyles from "./mapstyles";
+import mapStyles from "./map-styles";
 import * as placesData from "./data/markers.json";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { MarkerOverlay } from "./marker-overlay";
