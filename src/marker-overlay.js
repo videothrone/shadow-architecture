@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function MarkerOverlay(props) {
+    const [extendedImage, setExtendedImage] = useState(null);
+
     return (
         <React.Fragment>
             {props.overlayIsVisible && (
-                <div id="overlay-online-users">
+                <div id="overlay-online-users" className="disable-scrollbars">
                     <div id="marker-overlay-content-container">
                         <div
                             id="x"
@@ -13,9 +15,16 @@ export function MarkerOverlay(props) {
                             X
                         </div>
                         <h2>{props.selectedPlace.properties.NAME}</h2>
-                        <div>
+                        <div
+                            onClick={
+                                extendedImage == null
+                                    ? () => setExtendedImage("extended")
+                                    : () => setExtendedImage(null)
+                            }
+                        >
                             <img
                                 src={props.selectedPlace.properties.IMAGEURL}
+                                className={extendedImage}
                             />
                         </div>
                         <div id="overlay-address">
