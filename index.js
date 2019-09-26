@@ -5,8 +5,8 @@ const db = require("./utils/db");
 const { hash, compare } = require("./utils/bc");
 const cookieSession = require("cookie-session");
 // const csurf = require("csurf");
-const s3 = require("./s3");
-const config = require("./config");
+// const s3 = require("./s3");
+// const config = require("./config");
 const compression = require("compression");
 
 app.use(compression());
