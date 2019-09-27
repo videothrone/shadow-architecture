@@ -29,7 +29,7 @@ export function MarkerOverlay(props) {
                         </div>
                         <div id="overlay-address">
                             {props.selectedPlace.properties.ADDRESS} |{" "}
-                            <div className="route" id="overlay-icon">
+                            <div className="route-marker" id="overlay-icon">
                                 <a
                                     href={
                                         props.selectedPlace.properties.DIRECTION

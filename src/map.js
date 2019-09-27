@@ -68,6 +68,24 @@ function googleMap() {
                             </Link>
                             <div id="info-window-address">
                                 {selectedPlace.properties.ADDRESS}
+                                <div className="route" id="overlay-icon-marker">
+                                    <a
+                                        href={
+                                            selectedPlace.properties.DIRECTION
+                                        }
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        <img
+                                            src="/img/icon-brown.png"
+                                            alt="Click for maps route"
+                                        />
+                                        <img
+                                            src="/img/icon-black.png"
+                                            className="overlay-icon icon-top"
+                                        />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </InfoWindow>

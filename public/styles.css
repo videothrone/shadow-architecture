@@ -66,6 +66,8 @@ h1 {
 #info-window-address {
     margin-top: 15px;
     color: darkgrey;
+    display: flex;
+    align-items: center;
 }
 
 #overlay-online-users {
@@ -158,6 +160,37 @@ h1 {
 }
 
 .route:hover .icon-top {
+    display: inline;
+}
+
+#overlay-icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+#overlay-icon-marker img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.route-marker {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.route-marker .icon-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 666;
+}
+
+.route-marker:hover .icon-top {
     display: inline;
 }
 
