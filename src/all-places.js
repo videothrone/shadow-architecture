@@ -15,6 +15,7 @@ export default function AllPlaces(props) {
                                 onClick={() => {
                                     props.setOverlayIsVisible(true);
                                     props.setSelectedPlace(place);
+                                    props.setInfoWindowIsVisible(false);
                                 }}
                             >
                                 <h2>{place.properties.SHORT_NAME}</h2>

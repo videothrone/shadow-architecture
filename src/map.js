@@ -107,6 +107,7 @@ function googleMap() {
                 setSelectedPlace={setSelectedPlace}
                 setOverlayIsVisible={setOverlayIsVisible}
                 overlayIsVisible={overlayIsVisible}
+                setInfoWindowIsVisible={setInfoWindowIsVisible}
             />
         </Router>
     );
