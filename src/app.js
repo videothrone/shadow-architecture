@@ -1,5 +1,6 @@
 import React from "react";
 import Map from "./map";
+import ReactDOM from "react-dom";
 
 export class App extends React.Component {
     constructor() {
@@ -23,3 +24,5 @@ export class App extends React.Component {
         );
     }
 }
+
+ReactDOM.render(<App />, document.querySelector("main"));
