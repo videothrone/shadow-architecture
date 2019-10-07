@@ -374,4 +374,21 @@ h1 {
         width: 90vw;
         object-fit: cover;
     }
+
+    #overlay-icon img {
+        width: 18px;
+        height: 18px;
+        margin-left: 2.5px;
+    }
+
+    #overlay-icon-marker img {
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+    }
+
+    .route-marker {
+        width: 18px;
+        height: 18px;
+    }
 }
