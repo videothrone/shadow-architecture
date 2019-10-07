@@ -6,7 +6,7 @@ export function MarkerOverlay(props) {
     return (
         <React.Fragment>
             {props.overlayIsVisible && (
-                <div id="overlay-online-users" className="disable-scrollbars">
+                <div id="marker-overlay" className="disable-scrollbars">
                     <div id="marker-overlay-content-container">
                         <div
                             id="x"

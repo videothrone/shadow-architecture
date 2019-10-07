@@ -70,7 +70,7 @@ h1 {
     align-items: center;
 }
 
-#overlay-online-users {
+#marker-overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +89,7 @@ h1 {
     text-align: center;
 }
 
-#overlay-online-users h2 {
+#marker-overlay h2 {
     color: white;
     margin: 0;
     font-family: "UnifrakturCook", cursive;
@@ -97,7 +97,7 @@ h1 {
     padding: 10px;
 }
 
-#overlay-online-users img {
+#marker-overlay img {
     height: 55vh;
     width: 90vw;
     object-fit: cover;
@@ -105,7 +105,7 @@ h1 {
     transition: 0.5s;
 }
 
-#overlay-online-users img.extended {
+#marker-overlay img.extended {
     height: 100vh;
     width: 90vw;
     object-fit: cover;
@@ -214,6 +214,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 10vh;
+    margin-left: 15px;
     margin-bottom: 3vh;
 }
 
@@ -301,4 +302,76 @@ h1 {
 .disable-scrollbars {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: 7.1vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .place-container h2 {
+        text-align: center;
+        color: white;
+        font-size: 6vw;
+    }
+
+    .place-container {
+        width: 300px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .place-container img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .all-places-container {
+        margin-top: 5vh;
+        margin-left: 15px;
+        margin-bottom: 3vh;
+    }
+
+    .all-places-description {
+        padding: 15px;
+        font-size: 4.5vw;
+    }
+
+    #marker-overlay {
+        font-size: 15px;
+        padding: 3%;
+        text-align: center;
+    }
+
+    #marker-overlay h2 {
+        font-size: 6.5vw;
+    }
+
+    #full-description {
+        margin-top: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    #x {
+        font-family: "UnifrakturCook", cursive;
+        text-decoration: none;
+        color: #bb7c66;
+        cursor: pointer;
+        font-size: 6vw;
+        position: absolute;
+        margin-left: 89%;
+    }
+
+    #marker-overlay img {
+        cursor: initial;
+    }
+
+    #marker-overlay img.extended {
+        height: 55vh;
+        width: 90vw;
+        object-fit: cover;
+    }
 }
