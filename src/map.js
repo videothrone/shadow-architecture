@@ -119,7 +119,7 @@ export default function Map() {
     return (
         <div id="map-container">
             <WrappedMap
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=YourAPIKey`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyA5zjIyOdeSbgTOt5nmujLOXiIeqkCZUhU`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={
                     <div
