@@ -34,11 +34,11 @@ HTML, CSS, Node.js / Express, React, React Hooks, Bundle.js, react-google-maps, 
 
 -   Get to know the Google Maps API, including working with the react-google-maps NPM package, customizing the design and the UI to a certain aesthetic choice
 
--   Make a "slick" and modular React based site that's working fine on Desktop and can be extended easily further down the line
+-   Make a "slick" and modular React based site that's working fine on Desktop and most mobile devices and can be extended easily further down the line
 
 ## Future
 
--   Implement better mobile responsiveness
+-   Nicer mobile responsiveness on certain devices (tablets f.e.)
 
 -   Add more places and content
 

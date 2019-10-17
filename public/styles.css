@@ -312,8 +312,6 @@ h1 {
     }
 
     .place-container h2 {
-        text-align: center;
-        color: white;
         font-size: 6vw;
     }
 
@@ -388,7 +386,37 @@ h1 {
     }
 
     .route-marker {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .info-window {
+        font-family: "Arvo", serif;
+        font-size: 3vw;
+        margin-left: 8px;
+        width: 125px;
+    }
+
+    .info-window p {
+        margin-bottom: 5px;
+    }
+
+    .info-window h2 {
+        margin-bottom: 10px;
+        font-size: 3.5vw;
+    }
+
+    .info-window img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    #info-window-address {
+        margin-top: 5px;
+    }
+
+    #overlay-address {
+        font-size: 3.8vw;
     }
 }
