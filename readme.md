@@ -36,9 +36,11 @@ HTML, CSS, Node.js / Express, React, React Hooks, Bundle.js, react-google-maps, 
 
 -   Make a "slick" and modular React based site that's working fine on Desktop and most mobile devices and can be extended easily further down the line
 
+-   Pull all content dynamically from a central JSON file and handle the subsequent design challenges
+
 ## Future
 
--   Nicer mobile responsiveness on certain devices (tablets f.e.)
+-   Nicer / more custom mobile responsiveness on certain devices (tablets f.e.)
 
 -   Add more places and content
 
