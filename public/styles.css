@@ -8,6 +8,8 @@ body {
     margin: 0;
     background-image: url("img/bg.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "Arvo", serif;
     font-size: 20px;
     display: flex;
