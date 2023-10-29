@@ -2,19 +2,17 @@
 
 "Shadow Architecture" is my final project for [SPICED Academy](https://www.spiced.academy/program/full-stack-web-development/). The project was done in about a week and is a single-page React website, that shows curated "abandoned places" in Berlin via the Google Maps API.
 
+<b>Note:</b> This project was hosted for years on Heroku, before their free tier shut down. At this point the code and libraries are years old, out of date and the whole project needs major refactoring, since it can't be just transfered into a new React environment as is. While it's not unrealistic that I'll do that, it will happen in an different repo, since I want to preserve what I did at the bootcamp as a moment in time.
+
 ---
 
 ## Siteflow
 
-[![Shadow Architecture](siteflow.gif)](https://shadow-architecture.herokuapp.com)
+[![Shadow Architecture](siteflow.gif)]
 
-[![Shadow Architecture](siteflow2.gif)](https://shadow-architecture.herokuapp.com)
+[![Shadow Architecture](siteflow2.gif)]
 
-[![Shadow Architecture](siteflow3.gif)](https://shadow-architecture.herokuapp.com)
-
-## Demo
-
-https://shadow-architecture.herokuapp.com
+[![Shadow Architecture](siteflow3.gif)]
 
 ## Tech
 
