@@ -8,11 +8,11 @@
 
 ## Siteflow
 
-[![Shadow Architecture](siteflow.gif)]
+![Shadow Architecture](siteflow.gif)
 
-[![Shadow Architecture](siteflow2.gif)]
+![Shadow Architecture](siteflow2.gif)
 
-[![Shadow Architecture](siteflow3.gif)]
+![Shadow Architecture](siteflow3.gif)
 
 ## Tech
 
