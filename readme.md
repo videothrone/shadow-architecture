@@ -2,7 +2,7 @@
 
 "Shadow Architecture" is my final project for [SPICED Academy](https://www.spiced.academy/program/full-stack-web-development/). The project was done in about a week and is a single-page React website, that shows curated "abandoned places" in Berlin via the Google Maps API.
 
-<b>Note:</b> This project was hosted for years on Heroku, before their free tier shut down. At this point the code and libraries are years old, out of date and the whole project needs major refactoring, since it can't be just transfered into a new React environment as is. While it's not unrealistic that I'll do that, it will happen in an different repo, since I want to preserve what I did at the bootcamp as a moment in time.
+<b>Note:</b> This project was hosted for years on Heroku, before their free tier shut down. At this point the code and libraries are years old, out of date and the whole project needs major refactoring, since it can't be just transfered into a new React environment as is. Since I want to preserve what I did at the bootcamp as a moment in time, you can find a rebuild (at this time still a work-in-progress) of this project here → [Shadow Architecture Redux](https://github.com/videothrone/shadow-architecture-redux)
 
 ---
 
@@ -36,10 +36,3 @@ HTML, CSS, Node.js / Express, React, React Hooks, Bundle.js, react-google-maps, 
 
 -   Pull all content dynamically from a central JSON file and handle the subsequent design challenges
 
-## Future
-
--   Nicer / more custom mobile responsiveness on certain devices (tablets f.e.)
-
--   Add more places and content
-
--   More map functionality
